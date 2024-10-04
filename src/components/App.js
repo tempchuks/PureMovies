@@ -56,9 +56,9 @@ function Main({ children }) {
 
 function WatchedMovie({ imdbid, details, setDetails }) {
   const [open, setOpen] = useState(true);
-  const [watchedList, setWatchedList] = useState([
-    ...JSON.parse(localStorage.getItem("watched")),
-  ]);
+  const hen = JSON.parse(localStorage.getItem("watched"));
+  console.log(hen);
+  const [watchedList, setWatchedList] = useState(hen);
   useEffect(
     function () {
       if (!watchedList) return;
@@ -80,7 +80,7 @@ function WatchedMovie({ imdbid, details, setDetails }) {
           <Summary
             watchedList={watchedList}
             setWatchedList={setWatchedList}
-            key={imdbid}
+            key={"summary"}
           />
         ) : (
           <Details
@@ -88,6 +88,7 @@ function WatchedMovie({ imdbid, details, setDetails }) {
             setDetails={setDetails}
             setWatchedList={setWatchedList}
             watchedList={watchedList}
+            key={"summary"}
           />
         ))}
     </div>
