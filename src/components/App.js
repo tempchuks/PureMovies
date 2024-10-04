@@ -56,9 +56,9 @@ function Main({ children }) {
 
 function WatchedMovie({ imdbid, details, setDetails }) {
   const [open, setOpen] = useState(true);
-  const hen = JSON.parse(localStorage.getItem("watched"));
-  console.log(hen);
-  const [watchedList, setWatchedList] = useState(hen);
+  const data = JSON.parse(localStorage.getItem("watched"));
+
+  const [watchedList, setWatchedList] = useState(data);
   useEffect(
     function () {
       if (!watchedList) return;
