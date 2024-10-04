@@ -1,13 +1,157 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap");
+* {
+  font-family: "Edu AU VIC WA NT Dots", Arial, Helvetica, sans-serif;
+
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: rgb(112, 111, 111);
+}
+.app {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: greenyellow;
+  color: rgb(39, 39, 39);
+  height: 75px;
+}
+.header input {
+  height: 40px;
+  width: 300px;
+  border: 1px solid rgb(20, 20, 20);
+  border-radius: 7px;
+  padding-left: 10px;
+  background-color: transparent;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+}
+.header input:focus {
+  outline: none;
+}
+
+.container {
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 90%;
+  color: white;
+  display: flex;
+  width: 900px;
+  justify-content: center;
+
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-result {
+  background-color: rgb(61, 59, 59);
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+  border-radius: 7px;
+}
+.search-result ul {
+  list-style-type: none;
+
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  width: 19px;
+
+  background-color: greenyellow;
+}
+.error,
+.loading {
+  text-align: center;
+}
+.search-result ul li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  height: 112px;
+}
+
+.search-result ul li:hover {
+  cursor: pointer;
+  background-color: rgba(95, 95, 95, 0.251);
+}
+
+.search-result ul li h4 {
+  font-weight: 900;
+  color: #dee2e6;
+}
+
+.search-result ul li div {
+  display: grid;
+  gap: 1rem;
+}
+
+.search-result ul li img {
+  margin-left: 1rem;
+  width: 80px;
+  height: 100px;
+  border-radius: 7px;
+}
+
+.watched-movie {
+  background-color: rgb(61, 59, 59);
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+  border-radius: 7px;
+}
+.summary {
+  display: grid;
+  justify-content: center;
+  background-color: greenyellow;
+  color: black;
+  text-align: center;
+  border-bottom: 1px solid grey;
+}
+
+.details {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.details p {
+  word-spacing: 0.4rem;
+}
+
+.movie-details {
+  display: flex;
+  gap: 1rem;
+}
+.movie-details div {
+  display: grid;
+}
+.movie-details img {
+  height: 200px;
+  width: 143px;
+  border-radius: 7px;
 }
