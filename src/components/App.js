@@ -186,7 +186,7 @@ function Summary({ watchedList, setWatchedList }) {
         {watchedList?.map((v, i) => (
           <WatchedMovieList
             watchedmovie={v}
-            key={v.imbdID}
+            key={`v.imbdID${i}`}
             watchedList={watchedList}
             setWatchedList={setWatchedList}
           />
