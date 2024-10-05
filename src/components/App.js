@@ -177,8 +177,7 @@ function Summary({ watchedList, setWatchedList }) {
             avg imdb
           </p>
           <p>
-            {isNaN(myAvgRating.toFixed(1)) ? 0 : imdbAvgRating.toFixed(1)} 🌟
-            avg
+            {isNaN(myAvgRating.toFixed(1)) ? 0 : myAvgRating.toFixed(1)} 🌟 avg
           </p>
           <p>{minutesWatched} min</p>
         </div>
